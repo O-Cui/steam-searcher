@@ -1,0 +1,69 @@
+.profileIcon{
+    height: 100px;
+    width: 100px;
+
+}
+
+.userInfo{
+
+  margin-bottom: 3vh;
+}
+.pageDisplayProfile{
+  margin-top: 8vw;
+  margin-left: 2vw;
+  display:flex;
+  width: 95vw;
+  height: 100vh;
+  flex-direction: column;
+  color: white;
+}
+
+.ownedGamesHeader{
+
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+a:link {
+    font-size: 30px !important;
+    font-weight: bold;
+    color: white !important;
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    font-size: 30px !important;
+    font-weight: bold;
+    color: white !important;
+    text-decoration: none;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    font-size: 30px !important;
+    font-weight: bold;
+    color: white !important;
+    text-decoration: none;
+  }
+  
+  /* selected link */
+  a:active {
+    font-size: 30px !important;
+    font-weight: bold;
+    color: white !important;
+    text-decoration: none;
+  }
+
+  .flex{
+    display:flex;
+    width: 100%;
+  }
+  .thirtythree{
+    width: 33%;
+  }
+  .bold{
+    margin-top: 10px;
+    font-weight:bold;
+  }

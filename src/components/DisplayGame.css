@@ -1,0 +1,80 @@
+.gameBanner{
+    margin-top: 2vw;
+    height: 215px;
+    width: 460px;
+
+}
+
+.displayGame{
+
+  display:flex;
+  margin-left: 6vw;
+  width: 90vw;
+  flex-direction: column;
+  color: white;
+
+}
+a:link {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+  }
+  
+  /* selected link */
+  a:active {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+  }
+  
+.header{
+  margin-top: 12vh;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+.flex{
+  display: flex;
+
+}
+
+.description{
+  width: 570px;
+  margin-top: 7vh;
+  margin-bottom: 10vh;
+  word-wrap: break-word;
+}
+.miniHeader{
+  margin-bottom: 3vh;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+.fixedRight{
+  position: fixed !important;
+  right:7vw;
+  top:27vh;
+
+}
+
+
+img{
+  max-width: 40vw;
+  margin-bottom: 10px;
+}

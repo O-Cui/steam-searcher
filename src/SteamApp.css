@@ -1,0 +1,59 @@
+.search{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.searchUser{
+    display:flex; 
+    flex-flow: row wrap;
+    top: 0px
+}
+
+.searchGame{
+    display:flex; 
+    flex-flow: row wrap;
+    top: 30px;
+}
+
+.half{
+    width: 50%;
+
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    right:0;
+    z-index: 100000;
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    background-color: rgb(92, 0, 41);
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.searchButton{
+
+    right: 0;
+    float:right;
+    height: 5vh;
+    margin-right: 2vw;
+    cursor:pointer;
+}
+
+.logoButton{
+    background-color: rgb(92, 0, 41);
+    border: none !important;
+    height: 10vh;
+    cursor:pointer;
+    color: white;
+    font-size: 30px;
+    margin-left: -10vw;
+    font-weight: bold;
+}
+.topIndent{
+    margin-top:15vh;
+}
+html {background-color: rgb(97, 48, 75);}
