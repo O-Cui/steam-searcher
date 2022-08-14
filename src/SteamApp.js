@@ -46,8 +46,8 @@ export class SteamApp extends React.Component{
     
     //Run two get calls for the past games and users 
     const [recentGames, recentUsers] = await Promise.all([
-        axios.get("https://steam-searcher.herokuapp.com/getRecentGames"),
-        axios.get("https://steam-searcher.herokuapp.com/getRecentUsers")
+        axios.get("https://steam-search.herokuapp.com/getRecentGames"),
+        axios.get("https://steam-search.herokuapp.com/getRecentUsers")
     ])
 
         /*
@@ -113,11 +113,12 @@ export class SteamApp extends React.Component{
 
         //Run two post calls for the steam user data
         const [userSummary, userOwnedGames] = await Promise.all([
-            axios.post("https://steam-searcher.herokuapp.com/getUserSummary", toSend),
-            axios.post("https://steam-searcher.herokuapp.com/getOwnedGames", toSend) 
+            axios.post("https://steam-search.herokuapp.com/getUserSummary", toSend),
+            axios.post("https://steam-search.herokuapp.com/getOwnedGames", toSend) 
         ])
             
             //Check for errors or no users found
+            console.log(userSummary.data)
             if (userSummary.data.response.players.length == 0){
                // console.log("No users found!")
                 foundResult = "userError";
@@ -159,7 +160,7 @@ export class SteamApp extends React.Component{
 
             //Post call to save data
             const [saveUser] = await Promise.all([
-            axios.post("https://steam-searcher.herokuapp.com/saveUser", toStore),  
+            axios.post("https://steam-search.herokuapp.com/saveUser", toStore),  
             ])
             
             //Checking for errors
@@ -190,7 +191,7 @@ export class SteamApp extends React.Component{
 
         //Run post calls for the steam game api results
         const [gameSummary] = await Promise.all([
-            axios.post("https://steam-searcher.herokuapp.com/getGameData", toSend),
+            axios.post("https://steam-search.herokuapp.com/getGameData", toSend),
         ])
 
             //console.log(gameSummary.data)
@@ -240,7 +241,7 @@ export class SteamApp extends React.Component{
 
             //Post call to save the data
             const [saveGame] = await Promise.all([
-            axios.post("https://steam-searcher.herokuapp.com/saveGame", toStore),  
+            axios.post("https://steam-search.herokuapp.com/saveGame", toStore),  
             ])
 
             /*

@@ -1,6 +1,6 @@
 require('dotenv').config()
 const Pool = require('pg').Pool
-
+console.log(process.env.PORT)
 //Hidden database variables from .env file
 const pool = new Pool({
     user: process.env.USER,
@@ -61,10 +61,11 @@ const saveGame = (request, response) => {
 
 //Returns the 5 most recently searched game's info 
 const getRecentGames = (request, response) => {
+  console.log("HERE")
   pool.query("SELECT * FROM ( SELECT DISTINCT ON (game_id) * FROM searched_games ORDER BY game_id, saved_date DESC) sub ORDER BY saved_date DESC LIMIT 5", (error, results) =>{
       
       if (error) {
-        //console.log(error)
+        console.log(error)
         response.status(499).send("Error with getting recent games!");
         return
       }

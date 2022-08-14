@@ -25,7 +25,7 @@ app.use(
 
 //Call for User Summary (Name, Date created, Last log in, Icon, SteamID)
 app.post('/getUserSummary', (req, res) => {
-
+    console.log(process.env)
     ApiHelper.make_API_call(("https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/?appid=1145360&key=" +  process.env.KEY + "&steamids=" + req.body.steamID))
     //What to do after the api has been called
     .then(response => {
