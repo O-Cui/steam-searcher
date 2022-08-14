@@ -159,6 +159,7 @@ export class SteamApp extends React.Component{
             */
 
             //Post call to save data
+            console.log("SAVED USER")
             const [saveUser] = await Promise.all([
             axios.post("https://steam-search.herokuapp.com/saveUser", toStore),  
             ])
@@ -168,10 +169,10 @@ export class SteamApp extends React.Component{
                 console.log("Error with storing the user data!")
             }
 
-            /*
+            
             console.log("Saved user info below:")
             console.log(saveUser)
-            */
+            
 
     }
 
@@ -305,6 +306,7 @@ export class SteamApp extends React.Component{
                     </Button>
                     </div>
                 </div>
+                
             </div>
         )
     }

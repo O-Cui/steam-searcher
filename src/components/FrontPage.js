@@ -80,6 +80,7 @@ class FrontPage extends React.Component{
         return(
             <div className="pageDisplay">
                 {pageDisplay}
+                <div> Past games + users unavailable due to hosting limitations</div>
             </div>
         )
     }
